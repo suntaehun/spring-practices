@@ -16,7 +16,6 @@
 	http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<context:annotation-config />
-	<context:component-scan
-		base-package="com.example.springex.controller" />
+	<context:component-scan base-package="" />
 
 </beans>
