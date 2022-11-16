@@ -12,7 +12,7 @@
 <title>방명록</title>
 </head>
 <body>
-	<form action="${pageContext.request.contextPath }/index" method="post">
+	<form action="${pageContext.request.contextPath }/add" method="post">
 		<table border=1 width=500>
 			<tr>
 				<td>이름</td>
@@ -24,7 +24,7 @@
 				<td colspan=4><textarea name="contents" cols=60 rows=5></textarea></td>
 			</tr>
 			<tr>
-				<td colspan=4 align=right><input type="submit" VALUE="등록"></td>
+				<td colspan=4 align=right><input type="submit" value="등록"></td>
 			</tr>
 		</table>
 	</form>
@@ -33,11 +33,11 @@
 		<br>
 		<table width=510 border=1>
 			<tr>
-				<td>${count-status.index }</td>
+				<td>[${count-status.index }]</td>
 				<td>${vo.name }</td>
 				<td>${vo.reg_date }</td>
 				<td><a
-					href="${pageContext.request.contextPath }/delete?no=${vo.no }">삭제</a></td>
+					href="${pageContext.request.contextPath }/delete/${vo.no }">삭제</a></td>
 			</tr>
 			<tr>
 				<td colspan=4>${fn:replace(vo.contents, newLine, '<br/>') }</td>
